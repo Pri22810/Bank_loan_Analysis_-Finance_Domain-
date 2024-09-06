@@ -1,0 +1,16 @@
+//created a database in MS SQL server and imported the csv file and named the table as finanicial_loan. After that i am using the SQL queries to find the things which are mentioned in problem statement and i mentioned every query which i used for this project in this file.
+
+select * from financial_loan;
+
+
+SELECT COUNT(id) AS Total_Applications FROM financial_loan;
+ 
+ SELECT COUNT(id) AS MTD_Total_Applications FROM financial_loan
+WHERE MONTH(issue_date) = 12 AND YEAR(issue_date) =2021
+;  /'for december month/'
+
+SELECT COUNT(id) AS PMTD_Total_Applications FROM financial_loan
+WHERE MONTH(issue_date) = 11 AND YEAR(issue_date) =2021;
+
+SELECT SUM(loan_amount) AS Total_Funded_Amount FROM financial_loan;
+
